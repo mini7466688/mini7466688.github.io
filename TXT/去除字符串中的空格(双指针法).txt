@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+#include<string.h>
+
+void del_space(char s[])
+{
+	int slow=0,fast=0,len=strlen(s);
+	while(fast!=len+1)
+	{
+		if(s[slow]!=' ')
+		{
+			slow++,fast++;
+		}
+		else
+		{
+			if(s[fast]==' ')
+			{
+				fast++;
+			}
+			else
+			{
+				s[slow]=s[fast];
+				s[fast]=' ';
+				slow++,fast++;
+			}
+		}
+	}
+	s[slow]='\0';
+}
+int main()
+{
+	char s[100];
+	gets(s);
+	del_space(s);
+	puts(s);
+	return 0;
+}
