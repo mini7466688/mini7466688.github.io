@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	system("color 1f");
+	double s,r;
+	char g;
+	while(1)
+	{
+	cout << "请输入第一个数字" << endl;
+	cin >>s;
+	cout << "请输入第二个数字" << endl;
+	cin>>r;
+	cout << "请输入运算符+,-,*,/,%,&,<<(输入<),>>(输入>),|" << endl;
+	cin>>g;
+	switch(g)
+		{
+			case '+':
+				cout << (s+r) << endl;
+			break;
+			
+			case '-':
+				cout << (s-r) << endl;
+			break;
+			
+			case '*':
+				cout << (s*r) << endl;
+			break;
+			
+			case '/':
+				cout << (s/r) << endl;
+			break;
+			
+			case '%':
+				cout << ((int)s%(int)r) << endl;
+			break;
+			
+			case '&':
+				cout << ((int)s&(int)r) << endl;
+			break;
+			
+			case '<':
+				cout << ((int)s<<(int)r) << endl;
+			break;
+			
+			case '>':
+				cout << ((int)s>>(int)r) <<endl;
+			break;
+			
+			case '|':
+				cout << ((int)s|(int)r) << endl;
+			break;
+			
+			default:
+				cout << "输入错误" << endl;
+			break;
+		}
+	}
+}
