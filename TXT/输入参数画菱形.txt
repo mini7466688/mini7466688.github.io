@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	system("color 0a");
+	int n;
+	cout << "请输入您想画的菱形的中间边长:" ;
+	cin>>n;
+	for(int i=n/2;i>0;i--)
+	{
+		for(int j=0;j<n-i;j++)
+		{
+			cout << (j<i?" ":"*");
+		}
+	cout << endl;
+	}
+	for(int i=0;i<n;i++)cout << "*";
+	cout<<endl;
+	
+	for(int i=1;i<=n/2;i++)
+	{
+		for(int j=0;j<n-i;j++)
+		{
+			cout << (j<i?" ":"*");
+		}
+	cout << endl;
+	}
+}
