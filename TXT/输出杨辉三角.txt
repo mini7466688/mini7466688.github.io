@@ -1,0 +1,39 @@
+	#include<iostream>
+	using namespace std;
+	#define N 9
+	#include<stdio.h>
+	
+	int main()
+	{
+		int n[N][N]={1};
+		int i,j;
+		//数组全部赋值为1
+		
+		for(i=0;i<N;i++)
+		{
+			for(j=0;j<=i;j++)
+			{
+				n[i][j]=1;
+			}
+		}
+		for(i=1;i<N;i++)
+		{
+			for(j=1;j<=i;j++)
+			{
+					n[i][j]=n[i-1][j-1]+n[i-1][j];
+			}
+		}
+		for(i=0;i<N;i++)
+		{
+			for(j=0;j<N-1-i;j++)
+			{
+				printf("   ");
+			}
+			for(j=0;j<=i;j++)
+			{
+				printf("%6d",n[i][j]);
+			}
+		cout << endl;
+		}
+	
+	}
